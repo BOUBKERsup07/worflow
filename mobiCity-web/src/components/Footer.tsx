@@ -58,7 +58,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 mb-4 md:mb-0">
-              © 2024 MobiCity. Tous droits réservés.
+              © 2025 MobiCity. Tous droits réservés.
             </div>
             <div className="flex space-x-6 text-gray-400">
               <span>🇲🇦 Maroc</span>
