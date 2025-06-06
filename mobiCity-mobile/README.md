@@ -1,72 +1,165 @@
-# 🚍 MobiCity – Application Mobile de Transport Intelligent (React Native)
+# 🚍 MobiCity - Application de Transport Intelligent
 
-**MobiCity** est une application mobile multiplateforme (Android & iOS) développée avec **React Native**. Elle vise à moderniser et fluidifier la mobilité urbaine dans les villes marocaines, en proposant aux citoyens une expérience intelligente, intuitive et connectée autour des transports en commun (bus et tram).
+![Bannière](https://via.placeholder.com/1200x400?text=MobiCity+Transport+Intelligent)
 
----
+Une application mobile multiplateforme (Android/iOS) pour révolutionner les transports en commun au Maroc.
 
-## 🧭 Contexte
+## 📌 Table des matières
+- [Aperçu](#-aperçu)
+- [Fonctionnalités](#-fonctionnalités) 
+- [Captures d'écran](#-captures-décran)
+- [Technologies](#-technologies)
+- [Installation](#-installation)
+- [Configuration](#%EF%B8%8F-configuration)
+- [Structure du projet](#-structure-du-projet)
+- [API utilisées](#-api-utilisées)
+- [Roadmap](#-roadmap)
+- [Contributions](#-contributions)
+- [Licence](#-licence)
 
-Le transport urbain au Maroc souffre de plusieurs problématiques :  
-- Informations souvent **non centralisées**,  
-- **Retards fréquents** sans préavis,  
-- Manque de **suivi en temps réel**,  
-- Et peu de solutions numériques adaptées au grand public.
+## 🌟 Aperçu
 
-Dans ce contexte, **MobiCity** s’impose comme une solution technologique intégrée pour répondre à ces enjeux. L'application capitalise sur les technologies mobiles, les services Firebase et la cartographie en temps réel pour offrir aux usagers un outil pratique, moderne et fiable.
+MobiCity résout les problèmes de mobilité urbaine au Maroc en offrant :
+- 🕒 Informations temps réel sur les transports
+- 🗺️ Navigation intuitive vers les arrêts
+- 🚍 Suivi live des bus/trams
+- 💬 Plateforme communautaire intégrée
 
----
+## ✨ Fonctionnalités
 
-## 🎯 Objectif de l'application
+### Carte Interactive
+- Visualisation des réseaux de transport
+- Géolocalisation précise
+- Alertes de proximité
 
-Permettre aux utilisateurs :
-- De **planifier leurs trajets** de manière optimale,
-- De **suivre en temps réel** les véhicules,
-- D’être **informés** des perturbations ou retards,
-- D’**évaluer** et **signaler** les conditions de voyage,
-- De **naviguer hors-ligne** grâce au cache local.
+### Planification
+- Calcul d'itinéraires optimisés
+- Estimation des temps de trajet
+- Historique des déplacements
 
----
+### Communauté
+- Notation des lignes
+- Signalement d'incidents
+- Modération collaborative
 
-## 📱 Fonctionnalités principales (MVP)
+### Hors-ligne
+- Cache des données essentielles
+- Accès sans connexion
+- Synchronisation automatique
 
-| Fonctionnalité                     | Description                                                                 |
-|-----------------------------------|-----------------------------------------------------------------------------|
-| 📍 Carte interactive              | Affichage dynamique des lignes, arrêts et véhicules en temps réel.         |
-| 🧭 Planification d'itinéraires     | Recherche de trajets optimisés selon le temps, distance et correspondances.|
-| 🔐 Authentification sécurisée      | Connexion via email/mot de passe ou Google (Firebase Auth).                |
-| 🚌 Visualisation des transports    | Suivi des bus et trams en direct sur la carte.                             |
-| ⭐ Feedback communautaire          | Notations, signalements d'incidents et visualisation des avis utilisateurs.|
-| 🔔 Notifications contextuelles     | Alertes de proximité, retards, perturbations (via Firebase Cloud Messaging).|
-| 📤 Mode hors-ligne                 | Consultation des plans et horaires même sans connexion Internet.           |
-| 🌐 Multilingue (FR/EN)            | Interface disponible en français et anglais pour une meilleure accessibilité.|
+## 📸 Captures d'écran
 
----
+| | | |
+|-|-|-|
+| ![Ecran 1](https://via.placeholder.com/200x400?text=Carte) | ![Ecran 2](https://via.placeholder.com/200x400?text=Trajets) | ![Ecran 3](https://via.placeholder.com/200x400?text=Profil) |
 
-## 🛠️ Technologies utilisées
+## 💻 Technologies
 
-| Composant              | Technologie                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| 📱 Framework mobile     | [React Native (Expo)](https://expo.dev/)                                   |
-| 🔐 Authentification     | [Firebase Auth](https://firebase.google.com/products/auth)                  |
-| ☁️ Base de données      | [Cloud Firestore](https://firebase.google.com/docs/firestore) (temps réel) |
-| 📡 Notifications        | [Firebase Cloud Messaging (FCM)]                                            |
-| 🗺️ Cartographie         | [react-native-maps](https://github.com/react-native-maps/react-native-maps), [OpenStreetMap](https://www.openstreetmap.org/) |
-| 📍 Géolocalisation      | [expo-location](https://docs.expo.dev/versions/latest/sdk/location/)        |
-| 🧠 State Management     | [Zustand](https://github.com/pmndrs/zustand)                                |
-| 💾 Stockage local       | [AsyncStorage](https://react-native-async-storage.github.io/async-storage/) |
-| 🔀 Navigation           | [React Navigation (Stack & Tab)](https://reactnavigation.org/)              |
-| 🎨 UI / Style           | Tailwind CSS (via NativeWind), react-native-paper                          |
+**Frontend**:
+- React Native (Expo)
+- TypeScript
+- React Navigation
+- NativeWind (TailwindCSS)
 
----
+**Backend**:
+- Firebase Authentication
+- Cloud Firestore
+- Firebase Cloud Messaging
+
+**Cartographie**:
+- react-native-maps
+- OpenStreetMap
+- Google Directions API
+
+## ⚙️ Installation
+
+```bash
+# 1. Cloner le dépôt
+git clone https://github.com/BOUBKERsup07/worflow/tree/main/mobiCity-mobile
+
+
+# 2. Installer les dépendances
+cd mobiCity-mobile
+npm install
+
+# 3. Configurer l'environnement
+cp .env.example .env
+
+# 4. Démarrer l'application
+expo start
+```
+
+## 🔧 Configuration
+
+1. **Firebase** :
+   - Créer un projet dans [Firebase Console](https://console.firebase.google.com/)
+   - Activer Authentication et Firestore
+   - Configurer les règles de sécurité
+
+2. **Google Maps** :
+   - Activer l'API Directions
+   - Générer une clé API
+
+3. **Fichier .env** :
+```env
+
+```
 
 ## 📂 Structure du projet
 
+```
 src/
-├── components/ # Composants réutilisables (boutons, cartes, etc.)
-├── screens/ # Écrans (auth, home, map, settings, etc.)
-├── navigation/ # Stack et Tab Navigators
-├── firebase/ # firebase.ts avec config & init
-├── store/ # Zustand pour l'état global
-├── utils/ # Fonctions utilitaires
-├── assets/ # Icônes, images, logos
-└── App.tsx # Point d'entrée de l'application
+├── assets/
+├── components/
+├── constants/
+├── context/
+├── firebase/
+├── hooks/
+├── navigation/
+├── screens/
+├── services/
+├── store/
+├── types/
+├── utils/
+└── App.tsx
+```
+
+## 🌐 API utilisées
+
+| Service | Utilisation | Lien |
+|---------|-------------|------|
+| Firebase Auth | Authentification | [Docs](https://firebase.google.com/docs/auth) |
+| Firestore | Base de données | [Docs](https://firebase.google.com/docs/firestore) |
+| Google Directions | Itinéraires | [Docs](https://developers.google.com/maps/documentation/directions) |
+| OpenStreetMap | Données carto | [Wiki](https://wiki.openstreetmap.org/wiki/API) |
+
+## 🗺️ Roadmap
+
+### MVP (v1.0)
+- [x] Authentification
+- [x] Carte de base
+- [ ] Suivi temps réel
+- [ ] Feedback utilisateurs
+
+### Futures versions
+- Paiements intégrés
+- Recommandations IA
+- Version web
+
+## 🤝 Contributions
+
+1. Forkez le projet
+2. Créez une branche (`git checkout -b feature/nouvelle-fonctionnalite`)
+3. Commitez (`git commit -m 'Ajout d'une fonctionnalité'`)
+4. Pushez (`git push origin feature/nouvelle-fonctionnalite`)
+5. Ouvrez une PR
+
+## 📜 Licence
+
+MIT © [Votre Nom] - Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+---
+
+<div align="center">
+  <sub>Développé avec ❤️ pour le Maroc</sub>
+</div>
