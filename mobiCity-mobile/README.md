@@ -1,5 +1,7 @@
 # 🚍 MobiCity - Application de Transport Intelligent
 
+![Bannière](https://via.placeholder.com/1200x400?text=MobiCity+Transport+Intelligent)
+
 Une application mobile multiplateforme (Android/iOS) pour révolutionner les transports en commun au Maroc.
 
 ## 📌 Table des matières
