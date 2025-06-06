@@ -24,7 +24,14 @@
       },
       "edgeToEdgeEnabled": true,
       "plugins": [
-        "expo-notifications"
+        "expo-notifications",{
+          "icon":"./assets/notifications.png",
+          "color":"#ffffff",
+          "sounds":{
+            "default":true,
+            "critical":true
+          }
+        }
       ]
     },
     "web": {
