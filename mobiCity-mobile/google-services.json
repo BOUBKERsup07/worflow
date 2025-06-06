@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "950345253833",
+    "project_id": "mobicity-27fbc",
+    "storage_bucket": "mobicity-27fbc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950345253833:android:34be36731e05501edb1e18",
+        "android_client_info": {
+          "package_name": "com.supTech.hadicity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoZPeSInt0GlPKzuvTGp2c837qfXeAoN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

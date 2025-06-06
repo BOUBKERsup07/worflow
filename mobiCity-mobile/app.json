@@ -16,14 +16,24 @@
       "supportsTablet": true
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
+      "package": "com.supTech.hadicity",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "plugins": [
+        "expo-notifications"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e50ac0a4-764c-409f-9ca7-c0549f696f81"
+      }
     }
   }
 }
